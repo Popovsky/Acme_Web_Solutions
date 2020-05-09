@@ -1,22 +1,22 @@
-/*
-    --primary-color: #926239;
-    --secondary-color: white;
-
-    color: var(--primary-color);
-*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body{
     --light-color: white;
+    --veryLightgrey-color: #eaeaea;
     --lightgrey-color: #666;
     --darkgrey-color: #333;
     font-family: sans-serif;
-    margin: 0;
-    padding: 0;
     font-size: 1.1em;
     line-height: 1.5em;
+    text-align: center;
 }
-div.container{
+.container{
     width: 90%;
     margin: auto;
+    max-width: 880px;
 }
 header{
     background-image: url("https://static.pexels.com/photos/248515/pexels-photo-248515.png");
@@ -24,11 +24,11 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--light-color);
-    text-align: center;
     padding: 100px 0 150px;
 }
 header p{
     padding: 1em 0;
+    margin: 1em 0;
 }
 header h1, header a{
     text-transform: capitalize;
@@ -40,6 +40,85 @@ header a{
     padding: 1em 2em;
     background: var(--darkgrey-color);
 }
+header a:hover{
+    color: var(--darkgrey-color);
+    background: var(--veryLightgrey-color);
+}
 header h1 span{
     text-transform: initial;
+}
+
+main>div:nth-child(1){
+    background: var(--veryLightgrey-color);
+    color: var(--darkgrey-color);
+}
+main article h2{
+    text-transform: capitalize;
+    padding: 1em 0;
+}
+main>div:nth-child(1) article p{
+    width: 49%;
+    padding: 0 1em 2em;
+    display: inline-block;
+}
+
+main>div:nth-child(2){
+    background: var(--darkgrey-color);
+    padding: 2em 0;
+}
+main section>section{
+    width: 32%;
+    display: inline-block;
+    background: var(--light-color);
+    color: var(--darkgrey-color);
+}
+main section>section:nth-child(2){
+    margin: 0 0.6em;
+}
+main section img{
+    width: 100%;
+}
+main section article{
+    padding: 2em 1.5em;
+}
+main section article h3{
+    text-transform: capitalize;
+    padding: 0 0 1em;
+}
+
+main>div:nth-child(3){
+    background: var(--light-color);
+    padding: 2em;
+}
+main>div:nth-child(3) h2{
+    text-transform: lowercase;
+}
+main>div:nth-child(3) h2:first-letter{
+    text-transform: uppercase;
+}
+main>div:nth-child(3) p{
+    padding: 1.5em 0;
+}
+
+main>div:nth-child(4){
+    color: var(--light-color);
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+main>div:nth-child(4)>section{
+    width: 50%;
+}
+main>div:nth-child(4)>section:nth-child(1){
+    background: #2690d4;
+}
+main>div:nth-child(4)>section:nth-child(2){
+    background: var(--darkgrey-color);
+}
+main>div:nth-child(4) section p{
+    padding: 1.5em 0;
+}
+main>div:nth-child(4) section a{
+    text-decoration: none;
+    color: var(--light-color);
 }
